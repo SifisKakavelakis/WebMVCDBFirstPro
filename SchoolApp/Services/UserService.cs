@@ -3,12 +3,10 @@ using SchoolApp.Core;
 using SchoolApp.Core.Filters;
 using SchoolApp.DTO;
 using SchoolApp.Exceptions;
-using SchoolApp.Filters;
 using SchoolApp.Models;
 using SchoolApp.Repositories;
 using SchoolApp.Security;
 using System.Linq.Expressions;
-using System.Resources;
 
 namespace SchoolApp.Services
 {
@@ -61,6 +59,8 @@ namespace SchoolApp.Services
             _logger.LogInformation("Retrieved {Count} users", dtoResult.Data.Count);
             return dtoResult;
         }
+
+
 
         public async Task<UserReadOnlyDTO?> GetUserByUsernameAsync(string username)
         {

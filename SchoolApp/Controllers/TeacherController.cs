@@ -8,7 +8,6 @@ namespace SchoolApp.Controllers
     public class TeacherController : Controller
     {
         private readonly IApplicationService _applicationService;
-
         public List<Error> ErrorArray { get; set; } = [];
 
         public TeacherController(IApplicationService applicationService)
@@ -28,9 +27,10 @@ namespace SchoolApp.Controllers
             return View();
         }
 
+        [HttpPost]
         public async Task<IActionResult> Signup(TeacherSignupDTO teacherSignupDTO)
         {
-            if(!ModelState.IsValid)
+            if (!ModelState.IsValid)
             {
                 return View(teacherSignupDTO);
             }
@@ -47,5 +47,8 @@ namespace SchoolApp.Controllers
                 return View(teacherSignupDTO);
             }
         }
+
+
+
     }
 }

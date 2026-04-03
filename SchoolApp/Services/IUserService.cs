@@ -1,7 +1,6 @@
 ﻿using SchoolApp.Core;
 using SchoolApp.Core.Filters;
 using SchoolApp.DTO;
-using SchoolApp.Filters;
 using SchoolApp.Models;
 
 namespace SchoolApp.Services
